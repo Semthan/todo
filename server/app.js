@@ -25,6 +25,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/', indexRouter);
-app.use('/', postsRouter)
+app.use('/posts', postsRouter)
 
 module.exports = app;
