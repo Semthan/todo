@@ -15,7 +15,7 @@ connection.once('open', () => {
 });
 
 var indexRouter = require('./routes/index');
-var postsRouter = require('./routes/posts')
+var todosRouter = require('./routes/todo')
 
 var app = express();
 
@@ -25,6 +25,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/', indexRouter);
-app.use('/posts', postsRouter)
+app.use('/todo', todosRouter)
 
 module.exports = app;
