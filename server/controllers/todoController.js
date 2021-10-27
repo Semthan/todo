@@ -22,4 +22,20 @@ exports.getSingleTodo = async (req, res) => {
     }
 }
 
+exports.addTodo = async (req, res) => {
+    try {
+        const newTodo = {
+            title: req.body.title,
+            content: req.body.content
+        }
+
+        const todo = await new Todo(newTodo)
+        todo.save()
+        res.status(200).json(todo)
+    } catch (err) {
+        console.error(err)
+        res.status(500).send
+    }
+}
+
 
