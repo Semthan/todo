@@ -38,4 +38,17 @@ exports.addTodo = async (req, res) => {
     }
 }
 
+exports.deleteSingleTodo = async (req, res) => {
+    try {
+
+        const todoId = req.params.id
+        await Todo.findByIdAndDelete(todoId)
+        const allTodo = await Todo.find({})
+        res.status(200).json(allTodo)
+    } catch (err) {
+        console.error(err)
+        res.status(500).send()
+    }
+}
+
 

@@ -10,5 +10,6 @@ router
 
 router
     .get('/:id', todoController.getSingleTodo)
+    .delete('/:id', todoController.deleteSingleTodo)
 
 module.exports = router;
