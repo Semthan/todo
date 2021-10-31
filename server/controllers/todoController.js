@@ -51,4 +51,25 @@ exports.deleteSingleTodo = async (req, res) => {
     }
 }
 
+exports.editTodo = async (req, res) => {
+    try {
+
+        const { id } = req.params
+
+        const newTodo = {
+            title: req.body.title,
+            content: req.body.content
+        }
+
+        const filter = { _id: id }
+
+        await Todo.findOneAndUpdate(filter, newTodo, { new: true })
+
+        res.status(200).json('Updated')
+    } catch (err) {
+        console.error(err)
+        res.status(500).send()
+    }
+}
+
 
