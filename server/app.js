@@ -19,6 +19,14 @@ var todosRouter = require('./routes/todo')
 
 var app = express();
 
+app.use(
+    cors({
+        origin: ['http://localhost:3000', 'http://localhost:3001'],
+        credentials: true,
+    }),
+);
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
