@@ -16,7 +16,15 @@ export const TodosPage = () => {
 
     return (
         <>
-
+            {Todos.map((todo) => { 
+                return (
+                    <>
+                    <h3>{todo.title}</h3>
+                    <p>{todo.content}</p> 
+                    <p>{todo.updatedAt}</p> 
+                    </>
+                )           
+            })}
         </>
     )
 }
