@@ -1,12 +1,21 @@
 import React from 'react'
+import { Card, Col } from 'react-bootstrap'
 
 export const TodoCard = ({todo}) => {
     return (
-        <div className="container">
-            <h3>{todo.title}</h3>
-            <p>{todo.content}</p> 
-            <p>{todo.updatedAt}</p> 
-        </div>
+        <Col>
+            <Card>
+                <Card.Header as="h5">{todo.title}</Card.Header>
+                <Card.Body>
+                    <Card.Text>
+                       {todo.content}
+                    </Card.Text> 
+                </Card.Body>
+                <Card.Footer>
+                <small className="text-muted">Last updated {todo.updatedAt}</small>
+                </Card.Footer>
+            </Card>
+        </Col>
     )
 }
 
