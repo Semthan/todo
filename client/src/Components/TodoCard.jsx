@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 import { Card, Col, Button, Modal} from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useHistory} from 'react-router-dom'
 
 export const TodoCard = ({todo}) => {
 
     const [show, setShow] = useState(false)
+    let history = useHistory()
 
-    const handleClose = () => setShow(false)
+    function handleClose() {
+        history.push("/todo")
+        setShow(false)
+    }
     const handleShow = () => setShow(true)
 
     return (
@@ -32,9 +36,11 @@ export const TodoCard = ({todo}) => {
                     {todo.content}
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    
+                        <Button variant="secondary" onClick={handleClose}>
                         Close
-                    </Button>
+                        </Button>
+                    
                     <Button variant="primary" onClick={handleClose}>
                         Save Changes
                     </Button>
