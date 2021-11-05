@@ -6,3 +6,4 @@ const url = axios.create({
 
 
 export const getAllTodos = () => url.get('/todo')
+export const getSingleTodo = () => url.get('/todo/:id')
