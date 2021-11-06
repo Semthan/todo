@@ -1,6 +1,7 @@
 import React, { useState} from 'react'
 import { Card, Col, Button, Modal} from 'react-bootstrap'
 import { Link, useHistory} from 'react-router-dom'
+import { deleteSingleTodo } from '../fetches'
 
 export const TodoCard = ({todo}) => {
 
@@ -11,6 +12,12 @@ export const TodoCard = ({todo}) => {
         history.push("/todo")
         setShow(false)
     }
+
+    function handleDelete() {
+        deleteSingleTodo(todo._id)
+        //history.go(0);
+    }
+
     const handleShow = () => setShow(true)
 
     return (
@@ -25,6 +32,7 @@ export const TodoCard = ({todo}) => {
                 <Card.Footer>
                 <small className="text-muted">Last updated {todo.updatedAt}</small>
                 <Link to={`/todo/${todo._id}`}><Button onClick={handleShow}>Edit</Button></Link>
+                <Button variant="danger" onClick={handleDelete}>Delete</Button>
                 </Card.Footer>
             </Card>
 
@@ -36,11 +44,9 @@ export const TodoCard = ({todo}) => {
                     {todo.content}
                 </Modal.Body>
                 <Modal.Footer>
-                    
-                        <Button variant="secondary" onClick={handleClose}>
+                    <Button variant="secondary" onClick={handleClose}>
                         Close
-                        </Button>
-                    
+                    </Button>
                     <Button variant="primary" onClick={handleClose}>
                         Save Changes
                     </Button>
