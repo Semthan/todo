@@ -2,6 +2,7 @@ import React, { useState} from 'react'
 import { Card, Col, Button, Modal} from 'react-bootstrap'
 import { Link, useHistory} from 'react-router-dom'
 import { deleteSingleTodo } from '../fetches'
+import { EditTodoForm } from './EditTodoForm'
 
 export const TodoCard = ({todo}) => {
 
@@ -42,6 +43,7 @@ export const TodoCard = ({todo}) => {
                 </Modal.Header>
                 <Modal.Body>
                     {todo.content}
+                    <EditTodoForm></EditTodoForm>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
