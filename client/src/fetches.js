@@ -7,6 +7,6 @@ const url = axios.create({
 
 export const getAllTodos = () => url.get('/todo')
 export const getSingleTodo = () => url.get('/todo/:id')
-export const addTodo = () => url.post('/todo/add')
+export const addTodo = (payload) => url.post('/todo/add', payload)
 export const editTodo = (payload, id) => url.post(`/todo/${id}`, payload)
 export const deleteSingleTodo = (id) => url.delete(`/todo/${id}`)

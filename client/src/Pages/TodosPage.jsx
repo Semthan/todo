@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import {  getAllTodos } from '../fetches'
 import { TodoCard } from '../Components/TodoCard'
 import { Container, Row } from 'react-bootstrap'
+import { NewTodoForm } from '../Components/NewTodoForm'
 
 export const TodosPage = () => {
 
@@ -14,6 +15,7 @@ export const TodosPage = () => {
 
     return (
         <Container>
+            <NewTodoForm></NewTodoForm>
             <Row xs={1} md={4} className='g-4'>          
                     {!Todos && <p> loading...</p> }
                         {Todos && Object.entries(Todos).map(item => {
