@@ -32,9 +32,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.get('/', (req, res) => {
-    res.send("test")
-})
+
 app.use('/', indexRouter);
 app.use('/todo', todosRouter)
 
