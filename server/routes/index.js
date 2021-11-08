@@ -6,8 +6,4 @@ var router = express.Router();
   res.json({ 'name': 'Sarmad' })
 }); */
 
-const postController = require('../controllers/postController')
-
-router.get('/', postController.getAllPosts)
-
 module.exports = router;
