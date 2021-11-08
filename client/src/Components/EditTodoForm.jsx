@@ -1,8 +1,10 @@
-import { useState } from "react"
-import { useHistory } from "react-router"
-import { editTodo,  } from "../fetches"
+import { useState, useEffect } from "react"
+import { useHistory, useParams } from "react-router"
+import { editTodo, getAllTodos } from "../fetches"
 
-export const EditTodoForm = ({todo}) => {
+export const EditTodoForm = () => {
+    const { id } = useParams()
+
     let history = useHistory()
 
     const [formValue,setFormValue ] = useState ({
@@ -10,19 +12,15 @@ export const EditTodoForm = ({todo}) => {
         content: ''
     })
 
-    const handleSubmit = async () => {
-
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         const { title, content} = formValue
         const payload = { title, content}
         console.log(payload)
         
-        try{
-            await editTodo(payload)
-           
-            history.push('/todo')
-        }catch (error){
-            console.log(error); 
-        }
+        await editTodo(payload,id)
+        
+        history.push('/todo')
     }
 
     
@@ -35,7 +33,7 @@ export const EditTodoForm = ({todo}) => {
     }
 
     return (
-        <form >
+        <form onSubmit={handleSubmit}>
             <input 
                 type="text"
                 name="title"
@@ -51,7 +49,7 @@ export const EditTodoForm = ({todo}) => {
                 onChange={handleChange}
             />            
             <button
-                type="button" onClick={handleSubmit}
+                type="submit"
             >
                 Edit
             </button>

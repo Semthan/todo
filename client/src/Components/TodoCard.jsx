@@ -32,7 +32,8 @@ export const TodoCard = ({todo}) => {
                 </Card.Body>
                 <Card.Footer>
                 <small className="text-muted">Last updated {todo.updatedAt}</small>
-                <Link to={`/todo/${todo._id}`}><Button onClick={handleShow}>Edit</Button></Link>
+                {/* <Link to={`/todo/edit${todo._id}`}><Button onClick={handleShow}>Edit</Button></Link> */}
+                <Link to={`/todo/edit/${todo._id}`}><Button>Edit</Button></Link>
                 <Button variant="danger" onClick={handleDelete}>Delete</Button>
                 </Card.Footer>
             </Card>

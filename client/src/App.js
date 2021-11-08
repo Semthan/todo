@@ -2,6 +2,7 @@ import './App.css';
 import axios from 'axios'
 import { Route, Switch } from 'react-router-dom';
 import { TodosPage } from './Pages/TodosPage';
+import { EditTodoPage } from './Pages/EditTodoPage';
 
 /* const url = axios.create({
   baseURL: 'http://localhost:5000/'
@@ -18,6 +19,7 @@ function App() {
   return (
     <>
       <Switch>
+        <Route path="/todo/edit/:id" component={EditTodoPage} />
         <Route path="/todo" component={TodosPage} />
       </Switch>
     </>
