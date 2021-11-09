@@ -19,14 +19,13 @@ var todosRouter = require('./routes/todo')
 
 var app = express();
 
-/* app.use(
+app.use(
     cors({
-        origin: ['https://semthan-todo.netlify.app/', 'http://localhost:3000', 'http://localhost:3001'],
+        origin: ['https://my-mern-todo.herokuapp.com', 'http://localhost:3000', 'http://localhost:3001'],
         credentials: true,
     }),
-); */
+);
 
-app.use(cors())
 
 app.use(logger('dev'));
 app.use(express.json());
