@@ -4,6 +4,8 @@ import axios from "axios";
     baseURL: process.env.API_KEY || 'http://localhost:5000'
 }) */
 
+axios.defaults.withCredentials = true;
+
 const url = axios.create({
     baseURL: process.env.API_KEY || 'https://semthan-todo.herokuapp.com/'
 });
