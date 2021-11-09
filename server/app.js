@@ -21,7 +21,7 @@ var app = express();
 
 app.use(
     cors({
-        origin: ['http://localhost:3000', 'http://localhost:3001'],
+        origin: ['https://confident-hoover-36b766.netlify.app/', 'http://localhost:3000', 'http://localhost:3001'],
         credentials: true,
     }),
 );
