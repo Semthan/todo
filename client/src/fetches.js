@@ -5,7 +5,7 @@ import axios from "axios";
 }) */
 
 const url = axios.create({
-    baseURL: 'https://semthan-todo.herokuapp.com/'
+    baseURL: process.env.API_KEY || 'https://semthan-todo.herokuapp.com/'
 });
 
 
