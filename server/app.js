@@ -6,7 +6,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const uri = process.env.ATLAS_URI;
+const uri = process.env.ATLAS_URI || 5000;
 
 mongoose.connect(uri, { useNewUrlParser: true });
 const { connection } = mongoose;
@@ -21,7 +21,7 @@ var app = express();
 
 app.use(
     cors({
-        origin: ['https://confident-hoover-36b766.netlify.app/', 'http://localhost:3000', 'http://localhost:3001'],
+        origin: ['https://semthan-todo.netlify.app/', 'http://localhost:3000', 'http://localhost:3001'],
         credentials: true,
     }),
 );

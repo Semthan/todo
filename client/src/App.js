@@ -20,7 +20,7 @@ function App() {
     <>
       <Switch>
         <Route path="/todo/edit/:id" component={EditTodoPage} />
-        <Route path="/todo" component={TodosPage} />
+        <Route path="/" component={TodosPage} />
       </Switch>
     </>
   );
