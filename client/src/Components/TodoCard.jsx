@@ -16,9 +16,9 @@ export const TodoCard = ({todo}) => {
 
     function handleDelete() {
         deleteSingleTodo(todo._id)
-        //history.go(0);
     }
 
+    {/* code for modal under development */}
     const handleShow = () => setShow(true)
 
     return (
@@ -32,12 +32,12 @@ export const TodoCard = ({todo}) => {
                 </Card.Body>
                 <Card.Footer>
                 <small className="text-muted">Last updated {todo.updatedAt}</small>
-                {/* <Link to={`/todo/edit${todo._id}`}><Button onClick={handleShow}>Edit</Button></Link> */}
                 <Link to={`/todo/edit/${todo._id}`}><Button>Edit</Button></Link>
                 <Button variant="danger" onClick={handleDelete}>Delete</Button>
                 </Card.Footer>
             </Card>
 
+            {/* code for modal under development */}
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>{todo.title}</Modal.Title>

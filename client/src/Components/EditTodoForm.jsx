@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react"
+import { useState} from "react"
 import { useHistory, useParams } from "react-router"
-import { editTodo, getAllTodos } from "../fetches"
+import { editTodo} from "../fetches"
 
 export const EditTodoForm = () => {
     const { id } = useParams()
@@ -22,8 +22,6 @@ export const EditTodoForm = () => {
         
         history.push('/todo')
     }
-
-    
 
     const handleChange = (event) => {
         setFormValue({
