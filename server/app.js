@@ -6,7 +6,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const uri = process.env.ATLAS_URI || 5000;
+const uri = process.env.ATLAS_URI;
 
 mongoose.connect(uri, { useNewUrlParser: true });
 const { connection } = mongoose;
