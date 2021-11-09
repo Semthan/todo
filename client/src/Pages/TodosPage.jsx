@@ -6,12 +6,12 @@ import { NewTodoForm } from '../Components/NewTodoForm'
 
 export const TodosPage = () => {
 
-    const [Todos, setTodos] = useState([])
+    const [Todos, setTodos] = useState([""])
     
 
     useEffect(() => {
         getAllTodos().then((res) => setTodos(res.data))
-    }, [])
+    }, [{}])
 
     return (
         <Container>
