@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
-import { addTodo } from '../fetches';
+import { useHistory } from 'react-router';
+import { addTodo} from '../fetches';
 
 export const NewTodoForm = () => {
 
+    let history = useHistory()
 
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
@@ -11,8 +13,9 @@ export const NewTodoForm = () => {
     const onSubmit = async e => {
         e.preventDefault();
         const payload = { title, content };
-    
         await addTodo(payload)
+        history.push("/")
+        window.location.reload()
     }
 
     const onChange = e => {
