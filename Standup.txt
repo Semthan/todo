@@ -1,0 +1,230 @@
+﻿2021-10-05
+
+
+Förra gången: -
+
+
+Idag: Skapade map strukturen och mind map
+
+Problem/hinder: hade svårt med att börja med projektet.
+
+
+
+
+2021-10-12
+
+
+Förra gången: Skapade map strukturen
+
+
+Idag: Skapade databasen i mongodDB Atlas
+
+Problem/hinder: inga
+
+
+
+
+2021-10-17
+
+
+Förra gången: Skapade databasen i mongodDB Atlas
+
+
+Idag: skapade repo, installerade dependencies, anslutade express med databsaen.
+
+Problem/hinder: inga
+
+
+
+
+2021-10-24
+
+
+Förra gången: repo init 
+
+
+Idag: skapa modellen för todo
+
+Problem/hinder: inga
+
+
+
+
+2021-10-25
+
+
+Förra gången: skapade modellen för todo
+
+
+Idag: skapa funktioner för todo crud
+
+Problem/hinder: inga
+
+
+
+
+2021-10-26
+
+
+Förra gången: skapade funktion och route för läsa all todo
+
+
+Idag: skapa andra crud funktioner/routes
+
+Problem/hinder: inga
+
+
+
+
+2021-10-27
+
+
+Förra gången: ändrade namn på alla funktioner och modellen
+
+
+Idag: skapa andra crud funktioner/routes
+
+Problem/hinder: inga
+
+
+
+
+2021-10-28
+
+
+Förra gången: skapade funktion för att lägga ny todo list
+
+
+Idag: skapa ta bort todo list funktion
+
+Problem/hinder: inga
+
+
+
+
+2021-10-31
+
+
+Förra gången: skapade ta bort todo list funktion
+
+
+Idag: skapa frontend
+
+Problem/hinder: inga
+
+
+
+
+2021-11-01
+
+
+Förra gången: skapade redigera funktion och react app
+
+
+Idag: skapa alla fetches funktioner
+
+Problem/hinder: inga
+
+
+
+
+2021-11-02
+
+
+Förra gången: skapade en sida för att rendera all todo listor
+
+
+Idag: skapa card/modal för att rendera all todo
+
+Problem/hinder: inga
+
+
+
+
+2021-11-04
+
+
+Förra gången: installerade react bootstrap 
+
+
+Idag: skapa card/modal med hjälp av react-bootstrap
+
+Problem/hinder: inga
+
+
+
+
+2021-11-05
+
+
+Förra gången: skapade card
+
+
+Idag: fortsätta med att göra klart card/modal
+
+Problem/hinder: inga
+
+
+
+
+2021-11-06
+
+
+Förra gången: skapade modal och card
+
+
+Idag: göra funktionalitet för ta bort, redigera och skapa 
+
+Problem/hinder: problem med att kunna redigera todo innehållet
+
+
+
+
+2021-11-07
+
+
+Förra gången: gjorde klart ta bort funktionalitet
+
+
+Idag: fortsätta med redigera och skapa 
+
+Problem/hinder: fortfarande problem med att kunna redigera todo innehållet genom modal
+
+
+
+
+2021-11-08
+
+
+Förra gången: försökte lösa redigering problemet 
+
+
+Idag: fortsätta med redigera och skapa 
+
+Problem/hinder: fortfarande problem med att kunna redigera todo innehållet genom modal
+
+
+
+
+2021-11-09
+
+
+Förra gången: löste problemet mer redigering genom att skapa ny sida istället 
+
+
+Idag: testa deploya 
+
+Problem/hinder: massa med problem
+
+
+
+
+2021-11-10
+
+
+Förra gången: löste problem genom att deploya både backend och frontend på heroku
+
+
+Idag: rensa koden och skriva klart standup 
+
+Problem/hinder: inga
